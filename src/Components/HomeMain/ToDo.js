@@ -8,6 +8,16 @@ const ToDo = () => {
   const [todo, setTodo] = useState("");
   const [list, setList] = useState([]);
   //console.log(selectsingle);
+  const handleSetSelect = () => {
+    setSelect(!select);
+    const newone = list.map((s) => list.indexOf(s));
+    if (select === true) {
+      setSelectSingle([...newone]);
+    }
+    if (select === false) {
+      setSelectSingle([]);
+    }
+  };
   const handleSelectSingle = (i) => {
     const find = selectsingle.find((s) => s === i);
 
@@ -18,8 +28,20 @@ const ToDo = () => {
       const filter = selectsingle.filter((s) => s !== i);
       setSelectSingle([...filter]);
     }
+    if (select === true) {
+      setSelectSingle([]);
+      const newone = list.map((s) => list.indexOf(s));
+      //console.log(newone);
+      console.log(i);
+      const newlyone = newone.filter((n) => n !== i);
+      console.log(newlyone);
+      setSelectSingle([...newlyone]);
+      console.log(selectsingle);
+    }
+    // const findnew = selectsingle.find((s) => s === 0);
+    // console.log(findnew);
   };
-  console.log(selectsingle);
+  //console.log(selectsingle);
   const addToList = () => {
     const newItem = todo;
     const newList = [...list, newItem];
@@ -54,9 +76,9 @@ const ToDo = () => {
         <div className="flex  items-center  mt-4">
           <div className="flex w-[540px] ">
             <img
-              onClick={() => setSelect(!select)}
+              onClick={handleSetSelect}
               className="w-[26px] h-[26px]"
-              src={`${select ? check : uncheck}`}
+              src={`${select ? uncheck : check}`}
               alt=""
             />
             <span className="font-bold block ml-2">Select All</span>
@@ -75,7 +97,11 @@ const ToDo = () => {
               <img
                 onClick={() => handleSelectSingle(list.indexOf(l))}
                 className="w-[26px] h-[26px]"
-                src={`${select ? check : uncheck}`}
+                src={`${
+                  false || selectsingle.find((s) => s === list.indexOf(l))
+                    ? check
+                    : uncheck
+                }`}
                 alt=""
               />{" "}
               <div className="flex w-full   flex-wrap">
