@@ -8,6 +8,17 @@ const ToDo = () => {
   const [todo, setTodo] = useState("");
   const [list, setList] = useState([]);
   //console.log(selectsingle);
+  const date = new Date();
+  const today =
+    date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+  const newDate = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate()
+  ).toDateString();
+  const todayDate = newDate.split(" ");
+  const finalDate = todayDate[2] + " " + todayDate[1] + " " + todayDate[3];
+  console.log(finalDate);
   const handleSetSelect = () => {
     setSelect(!select);
     const newone = list.map((s) => list.indexOf(s));
@@ -63,7 +74,7 @@ const ToDo = () => {
   };
   //console.log(list);
   return (
-    <div className="w-full h-[460px] mt-[37px] bg-white p-4">
+    <div className="w-full h-[460px] overflow-hidden mt-[37px] bg-white p-4">
       <h1 className="font-semibold text-base ">To Do List </h1>
       <div className="text-area flex">
         <textarea
@@ -103,23 +114,26 @@ const ToDo = () => {
         </div>
         <div>
           {list.map((l) => (
-            <div className="flex my-1">
+            <div className="flex  justify-between">
               {" "}
-              <img
-                onClick={() => handleSelectSingle(list.indexOf(l))}
-                className="w-[26px] h-[26px]"
-                src={`${
-                  false || selectsingle.find((s) => s === list.indexOf(l))
-                    ? check
-                    : uncheck
-                }`}
-                alt=""
-              />{" "}
-              <div className="flex w-full   flex-wrap">
-                <span className="font-semibold break-words block w-full ml-2">
-                  {l}
-                </span>
+              <div className="flex my-1">
+                <img
+                  onClick={() => handleSelectSingle(list.indexOf(l))}
+                  className="w-[26px] h-[26px]"
+                  src={`${
+                    false || selectsingle.find((s) => s === list.indexOf(l))
+                      ? check
+                      : uncheck
+                  }`}
+                  alt=""
+                />{" "}
+                <div className="flex w-full   flex-wrap">
+                  <span className="font-semibold break-words block w-full ml-2">
+                    {l}
+                  </span>
+                </div>
               </div>
+              <div className="text-[#E0E0E0]">Last Added: {finalDate}</div>
             </div>
           ))}
         </div>
