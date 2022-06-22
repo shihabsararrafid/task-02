@@ -4,9 +4,22 @@ import uncheck from "./../../Images/Icon_Vector_Uncheck.png";
 import check from "./../../Images/Icon_Vector_Check.png";
 const ToDo = () => {
   const [select, setSelect] = useState(false);
+  const [selectsingle, setSelectSingle] = useState([]);
   const [todo, setTodo] = useState("");
   const [list, setList] = useState([]);
-  console.log(todo);
+  //console.log(selectsingle);
+  const handleSelectSingle = (i) => {
+    const find = selectsingle.find((s) => s === i);
+
+    if (find === undefined) {
+      setSelectSingle([...selectsingle, i]);
+    }
+    if (find !== undefined) {
+      const filter = selectsingle.filter((s) => s !== i);
+      setSelectSingle([...filter]);
+    }
+  };
+  console.log(selectsingle);
   const addToList = () => {
     const newItem = todo;
     const newList = [...list, newItem];
@@ -15,7 +28,7 @@ const ToDo = () => {
     const element = document.getElementById("textarea");
     element.value = "";
   };
-  console.log(list);
+  //console.log(list);
   return (
     <div className="w-full h-[460px] mt-[37px] bg-white p-4">
       <h1 className="font-semibold text-base ">To Do List </h1>
@@ -54,6 +67,24 @@ const ToDo = () => {
               <span> Done</span>
             </button>
           </div>
+        </div>
+        <div>
+          {list.map((l) => (
+            <div className="flex my-1">
+              {" "}
+              <img
+                onClick={() => handleSelectSingle(list.indexOf(l))}
+                className="w-[26px] h-[26px]"
+                src={`${select ? check : uncheck}`}
+                alt=""
+              />{" "}
+              <div className="flex w-full   flex-wrap">
+                <span className="font-semibold break-words block w-full ml-2">
+                  {l}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
