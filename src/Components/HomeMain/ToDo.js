@@ -11,24 +11,23 @@ const ToDo = () => {
   const handleSetSelect = () => {
     setSelect(!select);
     const newone = list.map((s) => list.indexOf(s));
-    if (select === true) {
-      setSelectSingle([...newone]);
-    }
     if (select === false) {
+      setSelectSingle([...newone]);
+      console.log("select all true");
+    }
+    if (select === true) {
       setSelectSingle([]);
+      console.log(" select all false");
     }
   };
   const handleSelectSingle = (i) => {
+    // setSelect(true);
     const find = selectsingle.find((s) => s === i);
-
-    if (find === undefined) {
-      setSelectSingle([...selectsingle, i]);
-    }
-    if (find !== undefined) {
-      const filter = selectsingle.filter((s) => s !== i);
-      setSelectSingle([...filter]);
-    }
+    console.log(i);
+    console.log("array in selectsingle", selectsingle);
     if (select === true) {
+      console.log("true");
+      setSelect(false);
       setSelectSingle([]);
       const newone = list.map((s) => list.indexOf(s));
       //console.log(newone);
@@ -38,10 +37,22 @@ const ToDo = () => {
       setSelectSingle([...newlyone]);
       console.log(selectsingle);
     }
+    if (find === undefined) {
+      console.log("undefined");
+      setSelect(false);
+      setSelectSingle([...selectsingle, i]);
+    } else if (find !== undefined) {
+      console.log("not undefined");
+      setSelect(false);
+      const filter = selectsingle.filter((s) => s !== i);
+      setSelectSingle([...filter]);
+    }
+    console.log("array in  sdfaselectsingle", selectsingle);
+
     // const findnew = selectsingle.find((s) => s === 0);
     // console.log(findnew);
   };
-  //console.log(selectsingle);
+  console.log(selectsingle);
   const addToList = () => {
     const newItem = todo;
     const newList = [...list, newItem];
@@ -78,7 +89,7 @@ const ToDo = () => {
             <img
               onClick={handleSetSelect}
               className="w-[26px] h-[26px]"
-              src={`${select ? uncheck : check}`}
+              src={`${select ? check : uncheck}`}
               alt=""
             />
             <span className="font-bold block ml-2">Select All</span>
