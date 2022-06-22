@@ -112,7 +112,7 @@ const ToDo = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="my-1">
           {list.map((l) => (
             <div className="flex  justify-between">
               {" "}
