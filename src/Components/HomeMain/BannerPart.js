@@ -3,7 +3,7 @@ import pic1 from "./../../Images/Svg_sample1.svg";
 import "./BannerPart.css";
 const BannerPart = () => {
   return (
-    <div className="w-full flex px-[16px] justify-between items-center text-white banner h-[213px]">
+    <div className="w-full flex px-[16px] justify-between items-center text-white banner ">
       <div>
         <img src={pic1} alt="" />
       </div>

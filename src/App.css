@@ -5,13 +5,14 @@
   width: calc(100vw);
   display: grid;
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows:30px 1fr 1fr 1fr 1fr;
-  grid-row-gap: 10px;
+  grid-template-rows:30px 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
   grid-template-areas: 
    "p p p p p p p p p p p p"
     "h h h h h h h . a a a a"
     "h h h h h h h . a a a a"
     "t t t t t t t . a a a a"
+    "t t t t t t t . b b b b "
     "t t t t t t t . b b b b "
   ;
 
@@ -27,6 +28,9 @@
 }
 .detail-appointments{
   grid-area: a;
+}
+.corona-update{
+  grid-area: b;
 }
 .App-logo {
   height: 40vmin;

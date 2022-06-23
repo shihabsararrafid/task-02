@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import small from "./../../Images/small.png";
 import uncheck from "./../../Images/Icon_Vector_Uncheck.png";
 import check from "./../../Images/Icon_Vector_Check.png";
+import getDate from "../Hooks/GetDate";
 const ToDo = () => {
   const [select, setSelect] = useState(false);
   const [selectsingle, setSelectSingle] = useState([]);
@@ -13,16 +14,7 @@ const ToDo = () => {
   *code to get the current date in format of day /month/year
   --------------------------------------------------------------*/
 
-  const date = new Date();
-  const today =
-    date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-  const newDate = new Date(
-    date.getFullYear(),
-    date.getMonth(),
-    date.getDate()
-  ).toDateString();
-  const todayDate = newDate.split(" ");
-  const finalDate = todayDate[2] + " " + todayDate[1] + " " + todayDate[3];
+  const [finalDate] = getDate();
   console.log(finalDate);
 
   /*------------------------------------------------------
@@ -100,7 +92,7 @@ const ToDo = () => {
   };
   //console.log(list);
   return (
-    <div className=" todo-list ml-[60px]  h-[460px] overflow-hidden rounded-lg bg-white p-4">
+    <div className=" todo-list ml-[60px]   overflow-hidden rounded-lg bg-white p-4">
       <h1 className="font-semibold text-base ">To Do List </h1>
       <div className="text-area flex">
         <textarea

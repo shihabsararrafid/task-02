@@ -6,6 +6,7 @@ import AppointmentPart from "./Components/Appointment/AppointmentPart";
 import ToDo from "./Components/HomeMain/ToDo";
 import DetailAppointment from "./Components/Appointment/DetailAppointment";
 import Profile from "./Components/Appointment/Profile";
+import CoronaUpdate from "./Components/CoronaUpdate/CoronaUpdate";
 
 function App() {
   return (
@@ -13,12 +14,13 @@ function App() {
       <div className="flex justify-between">
         <Sidebar></Sidebar>
       </div>
-      <div className="flex mt-10 main-part flex-row justify-between flex-wrap">
+      <div className="flex mt-10 mb-12 main-part flex-row justify-between flex-wrap">
         <Profile></Profile>
         <HomeMain></HomeMain>
         <ToDo></ToDo>
 
         <DetailAppointment></DetailAppointment>
+        <CoronaUpdate></CoronaUpdate>
       </div>
     </div>
   );

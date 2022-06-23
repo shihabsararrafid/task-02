@@ -2,7 +2,7 @@ import React from "react";
 
 const DetailAppointment = () => {
   return (
-    <div className=" detail-appointments h-[570px]   rounded-lg p-[16px] mr-5 bg-white">
+    <div className=" detail-appointments    rounded-lg p-[16px] mr-5 bg-white">
       <h1 className="text-base  font-semibold">Upcoming Appointments</h1>
       <div className="flex flex-col gap-y-[24px]">
         <div className="mt-2 flex relative justify-center items-center ">
