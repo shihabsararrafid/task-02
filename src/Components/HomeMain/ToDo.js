@@ -8,6 +8,11 @@ const ToDo = () => {
   const [todo, setTodo] = useState("");
   const [list, setList] = useState([]);
   //console.log(selectsingle);
+
+  /*------------------------------------------------------------
+  *code to get the current date in format of day /month/year
+  --------------------------------------------------------------*/
+
   const date = new Date();
   const today =
     date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
@@ -19,6 +24,13 @@ const ToDo = () => {
   const todayDate = newDate.split(" ");
   const finalDate = todayDate[2] + " " + todayDate[1] + " " + todayDate[3];
   console.log(finalDate);
+
+  /*------------------------------------------------------
+  *function to be executed when the select all is clicked
+
+  * if select all is clicked then all the check mark will be active on the other hand all will be disabled
+  -------------------------------------------------------*/
+
   const handleSetSelect = () => {
     setSelect(!select);
     const newone = list.map((s) => list.indexOf(s));
@@ -31,6 +43,13 @@ const ToDo = () => {
       console.log(" select all false");
     }
   };
+
+  /*-----------------------------------------------------------
+  *function to be executed when single checkbox is clicked
+
+  * clicked check box will toggle its color
+  -----------------------------------------------------------*/
+
   const handleSelectSingle = (i) => {
     // setSelect(true);
     const find = selectsingle.find((s) => s === i);
@@ -63,7 +82,14 @@ const ToDo = () => {
     // const findnew = selectsingle.find((s) => s === 0);
     // console.log(findnew);
   };
-  console.log(selectsingle);
+  //console.log(selectsingle);
+
+  /*------------------------------------------
+  *getting data from text area
+  * retrieved data is set to the 'list' array
+  * After every time add button is clicked the text field value will be reset
+                                        ---------------------- */
+
   const addToList = () => {
     const newItem = todo;
     const newList = [...list, newItem];
