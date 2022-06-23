@@ -3,7 +3,7 @@ import small from "./../../Images/small.png";
 import uncheck from "./../../Images/Icon_Vector_Uncheck.png";
 import check from "./../../Images/Icon_Vector_Check.png";
 import getDate from "../Hooks/GetDate";
-const ToDo = () => {
+const ToDo = ({ isDark }) => {
   const [select, setSelect] = useState(false);
   const [selectsingle, setSelectSingle] = useState([]);
   const [todo, setTodo] = useState("");
@@ -92,7 +92,11 @@ const ToDo = () => {
   };
   //console.log(list);
   return (
-    <div className=" todo-list ml-[60px]   overflow-hidden rounded-lg bg-white p-4">
+    <div
+      className={` todo-list ml-[60px]   overflow-hidden rounded-lg ${
+        isDark ? "bg-[#2C2221]" : "bg-white"
+      }  ${isDark ? "text-white" : "text-black"}  p-4`}
+    >
       <h1 className="font-semibold text-base ">To Do List </h1>
       <div className="text-area flex">
         <textarea
@@ -101,7 +105,9 @@ const ToDo = () => {
           cols="65"
           rows="4"
           onChange={(e) => setTodo(e.target.value)}
-          className="border-[2px] focus:border-[#FF7978] outline-0 border-[#EDEBEB]"
+          className={`  ${
+            isDark ? "bg-[#2C2221]" : "bg-white"
+          }  border-[2px] focus:border-[#FF7978] outline-0 border-[#EDEBEB]`}
         ></textarea>
         {/* bg-gradient-to-r from-[#FF7594] to-[#FF7C65] */}
         <button

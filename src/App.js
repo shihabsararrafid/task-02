@@ -19,7 +19,7 @@ function App() {
       <div className="flex mt-10 mb-12 main-part flex-row justify-between flex-wrap">
         <Profile isDark={isDark} setDark={setDark}></Profile>
         <HomeMain isDark={isDark}></HomeMain>
-        <ToDo></ToDo>
+        <ToDo isDark={isDark}></ToDo>
 
         <DetailAppointment></DetailAppointment>
         <CoronaUpdate></CoronaUpdate>
