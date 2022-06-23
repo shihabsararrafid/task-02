@@ -7,15 +7,17 @@ import ToDo from "./Components/HomeMain/ToDo";
 import DetailAppointment from "./Components/Appointment/DetailAppointment";
 import Profile from "./Components/Appointment/Profile";
 import CoronaUpdate from "./Components/CoronaUpdate/CoronaUpdate";
+import { useState } from "react";
 
 function App() {
+  const [isDark, setDark] = useState(false);
   return (
-    <div className="flex bg-[#E5E5E5]">
+    <div className={`flex ${isDark ? "bg-black" : "bg-[#E5E5E5]"} `}>
       <div className="flex justify-between">
-        <Sidebar></Sidebar>
+        <Sidebar isDark={isDark} setDark={setDark}></Sidebar>
       </div>
       <div className="flex mt-10 mb-12 main-part flex-row justify-between flex-wrap">
-        <Profile></Profile>
+        <Profile isDark={isDark} setDark={setDark}></Profile>
         <HomeMain></HomeMain>
         <ToDo></ToDo>
 

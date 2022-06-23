@@ -3,8 +3,7 @@ import dark from "./../../Images/Toggle button (1).png";
 import light from "./../../Images/Toggle button.png";
 import avatar from "./../../Images/Avatar.png";
 import downArrow from "./../../Images/Icon_downArrow.png";
-const Profile = () => {
-  const [isDark, setDark] = useState(false);
+const Profile = ({ isDark, setDark }) => {
   return (
     <div className="flex px-7  profile items-center justify-end">
       <img
