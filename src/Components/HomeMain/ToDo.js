@@ -100,7 +100,7 @@ const ToDo = () => {
   };
   //console.log(list);
   return (
-    <div className="w-full h-[460px] overflow-hidden mt-[37px] bg-white p-4">
+    <div className=" todo-list ml-[60px]  h-[460px] overflow-hidden rounded-lg bg-white p-4">
       <h1 className="font-semibold text-base ">To Do List </h1>
       <div className="text-area flex">
         <textarea

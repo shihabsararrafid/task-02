@@ -6,7 +6,7 @@ import downArrow from "./../../Images/Icon_downArrow.png";
 const Profile = () => {
   const [isDark, setDark] = useState(false);
   return (
-    <div className="flex items-center justify-end">
+    <div className="flex px-7  profile items-center justify-end">
       <img
         onClick={() => setDark(!isDark)}
         src={`${isDark ? dark : light}`}

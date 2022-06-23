@@ -5,10 +5,9 @@ import ToDo from "./ToDo";
 
 const HomeMain = () => {
   return (
-    <div className="w-[718px]  ml-[60px] mt-[104px]">
+    <div className="  home-main   ml-[60px] ">
       <BannerPart></BannerPart>
       <HealthParam></HealthParam>
-      <ToDo></ToDo>
     </div>
   );
 };
