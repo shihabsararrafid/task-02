@@ -4,13 +4,14 @@ import menuDark from "./../../Images/Frame 2855.png";
 import Home from "./../../Images/Icon_Home.png";
 import Appointment from "./../../Images/Icon_Appointment.png";
 import round from "./../../Images/round.png";
-
+import logo from "./../../Images/Icon_Vector.png";
 import Patient from "./../../Images/Icon_Patient Profile.png";
 import Settings from "./../../Images/Icon_Settings.png";
 import SettingsDark from "./../../Images/Vector (3).png";
 import MedicalDark from "./../../Images/Vector (2).png";
 import PatientDark from "./../../Images/Group.png";
 import AppoinmentDark from "./../../Images/Group (1).png";
+import sideArrow from "./../../Images/Icon_SideArrow_round.png";
 import Medical from "./../../Images/Icon_medical history.png";
 const Sidebar = ({ isDark, setDark }) => {
   return (
@@ -22,10 +23,17 @@ const Sidebar = ({ isDark, setDark }) => {
       <div>
         <div className="shadow-lg ">
           <img
-            className=" w-[45px]  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]"
+            className=" w-[45px] hidden  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]"
             src={`${isDark ? menuDark : menu}`}
             alt=""
           />
+          <div className="flex absolute top-[31px] left-[37px] items-center justify-start">
+            <img className="w-[45px]" src={logo} alt="" />
+            <p className="text-2xl ml-6">
+              Medi<span className="text-[#FF7594] ">Doc</span>
+            </p>
+            <img className="ml-9 cursor-pointer" src={sideArrow} alt="" />
+          </div>
         </div>
         <div className="flex flex-col mt-[135px] gap-y-[45px]   ml-0 items-start">
           <div className="flex  items-center ">
