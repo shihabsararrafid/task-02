@@ -6,6 +6,7 @@ import menu from "./../../Images/Icon_Menu.png";
 import menuDark from "./../../Images/Frame 2855.png";
 import downArrow from "./../../Images/Icon_downArrow.png";
 import Sidebar from "../Sidebar/Sidebar";
+import NewSideBar from "../Sidebar/NewSideBar";
 const Profile = ({ isDark, setDark, isShrink }) => {
   const [anotherShrink, setAnotherShrink] = useState(false);
   const handleShrink = () => {
@@ -16,14 +17,27 @@ const Profile = ({ isDark, setDark, isShrink }) => {
     console.log(document1);
   };
   return (
-    <div id="profile" className="flex px-7  profile items-center ">
+    <div
+      id="profile"
+      className={`flex  ${
+        anotherShrink ? "px-7" : "pl-0"
+      }  profile items-center `}
+    >
       <div className="shadow-lg  menufromanother">
-        <img
-          onClick={handleShrink}
-          className={`w-[45px] cursor-pointer  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]`}
-          src={`${isDark ? menuDark : menu}`}
-          alt=""
-        />
+        {anotherShrink ? (
+          <img
+            onClick={handleShrink}
+            className={`w-[45px] cursor-pointer  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]`}
+            src={`${isDark ? menuDark : menu}`}
+            alt=""
+          />
+        ) : (
+          <NewSideBar
+            isDark={isDark}
+            anotherShrink={anotherShrink}
+            setAnotherShrink={setAnotherShrink}
+          ></NewSideBar>
+        )}
       </div>{" "}
       <div className="flex items-center">
         <img
