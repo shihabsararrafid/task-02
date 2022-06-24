@@ -25,7 +25,7 @@ function App() {
         <HomeMain isDark={isDark}></HomeMain>
         <ToDo isDark={isDark}></ToDo>
 
-        <DetailAppointment></DetailAppointment>
+        <DetailAppointment isDark={isDark}></DetailAppointment>
         <CoronaUpdate isDark={isDark}></CoronaUpdate>
       </div>
     </div>
