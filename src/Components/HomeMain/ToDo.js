@@ -91,6 +91,20 @@ const ToDo = ({ isDark }) => {
     const element = document.getElementById("textarea");
     element.value = "";
   };
+  /*--------------------------------------------------------------*
+   function to handle done button to delete to do list from the main list
+  -----------
+  */
+  const handleDoneBtn = () => {
+    console.log(selectsingle);
+    console.log(list);
+    const deletedList = selectsingle.map((s) => list[s]);
+    console.log(deletedList);
+    const newList = list.filter((l) => {
+      return !deletedList.includes(l);
+    });
+    setList(newList);
+  };
   //console.log(list);
   return (
     <div
@@ -140,7 +154,10 @@ const ToDo = ({ isDark }) => {
             <span className="font-bold block ml-2">Select All</span>
           </div>
           <div>
-            <button className="flex w-[120px] h-[40px] ml-3  text-white items-center bg-gradient-to-r from-[#FF7594] to-[#FF7C65] py-1 px-3 rounded-md ">
+            <button
+              onClick={handleDoneBtn}
+              className="flex w-[120px] h-[40px] ml-3  text-white items-center bg-gradient-to-r from-[#FF7594] to-[#FF7C65] py-1 px-3 rounded-md "
+            >
               <img src={small} className="" alt="" />
               <span> Done</span>
             </button>
