@@ -27,7 +27,7 @@ const Profile = ({ isDark, setDark, isShrink }) => {
         {anotherShrink ? (
           <img
             onClick={handleShrink}
-            className={`w-[45px] cursor-pointer  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]`}
+            className={`w-[45px] cursor-pointer  mx-auto absolute top-[25px] left-[37px] rounded h-[45px]`}
             src={`${isDark ? menuDark : menu}`}
             alt=""
           />
