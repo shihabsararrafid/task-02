@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import menu from "./../../Images/Icon_Menu.png";
 import menuDark from "./../../Images/Frame 2855.png";
 import Home from "./../../Images/Icon_Home.png";
@@ -14,25 +14,43 @@ import AppoinmentDark from "./../../Images/Group (1).png";
 import sideArrow from "./../../Images/Icon_SideArrow_round.png";
 import Medical from "./../../Images/Icon_medical history.png";
 const Sidebar = ({ isDark, setDark }) => {
+  const [isShrink, setShrink] = useState(true);
+  //   const handleShrink = () => {
+  //     setShrink()
+  //   };
   return (
     <div
-      className={`w-[264px] h-full absolute pl-[37px]    ${
-        isDark ? "bg-[#2E1619]" : "bg-white"
-      }`}
+      className={`${
+        isShrink ? "w-[96px]" : "w-[264px]"
+      }  h-full absolute pl-[37px]  ${
+        isShrink ? "overflow-hidden" : ""
+      } duration-300  ${isDark ? "bg-[#2E1619]" : "bg-white"}`}
     >
       <div>
         <div className="shadow-lg ">
           <img
-            className=" w-[45px] hidden  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]"
+            onClick={() => setShrink(!isShrink)}
+            className={`w-[45px] cursor-pointer  ${
+              isShrink ? "" : "hidden"
+            }  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]`}
             src={`${isDark ? menuDark : menu}`}
             alt=""
           />
-          <div className="flex absolute top-[31px] left-[37px] items-center justify-start">
+          <div
+            className={`flex ${
+              isShrink ? "hidden" : ""
+            }  absolute top-[31px] left-[37px] items-center justify-start `}
+          >
             <img className="w-[45px]" src={logo} alt="" />
             <p className="text-2xl ml-6">
               Medi<span className="text-[#FF7594] ">Doc</span>
             </p>
-            <img className="ml-9 cursor-pointer" src={sideArrow} alt="" />
+            <img
+              onClick={() => setShrink(!isShrink)}
+              className="ml-9 cursor-pointer"
+              src={sideArrow}
+              alt=""
+            />
           </div>
         </div>
         <div className="flex flex-col mt-[135px] gap-y-[45px]   ml-0 items-start">
@@ -80,11 +98,17 @@ const Sidebar = ({ isDark, setDark }) => {
           <div></div>
           <div className="mt-[140px] flex ">
             <img
-              className="w-[53px] hidden block mr-4 h-[53px] mx-auto  rounded "
+              className={`w-[53px] ${
+                isShrink ? "block" : "hidden"
+              }    mr-4 h-[53px] mx-auto  rounded `}
               src={round}
               alt=""
             />
-            <button className="bg-gradient-to-r from-[#FF7594] to-[#FF7C65] rounded-md text-white p-[16px]">
+            <button
+              className={` ${
+                isShrink ? "hidden" : ""
+              }   bg-gradient-to-r from-[#FF7594] to-[#FF7C65] rounded-md text-white p-[16px]`}
+            >
               New Appointment
             </button>
           </div>
