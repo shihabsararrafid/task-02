@@ -1,7 +1,7 @@
 import React from "react";
 import getDate from "../Hooks/GetDate";
 import corona from "./../../Images/Svg_sample2.png";
-const CoronaUpdate = () => {
+const CoronaUpdate = ({ isDark }) => {
   const [finalDate] = getDate();
   const day = new Date(finalDate);
   const dayArray = [
@@ -16,7 +16,13 @@ const CoronaUpdate = () => {
   var today = new Date().toLocaleTimeString();
   console.log(today);
   return (
-    <div className="corona-update px-6 py-10 mr-5 rounded-lg bg-white">
+    <div
+      className={`corona-update px-6 py-10 mr-5
+    ${isDark ? "bg-[#2C2221]" : "bg-white"} ${
+        isDark ? "text-white" : "text-black"
+      }
+    rounded-lg `}
+    >
       <div className="flex items-center font-semibold justify-between">
         <h1>Covid 19 Updates</h1>
         <div>

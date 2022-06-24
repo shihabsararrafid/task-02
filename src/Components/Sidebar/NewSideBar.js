@@ -12,78 +12,70 @@ import MedicalDark from "./../../Images/Vector (2).png";
 import PatientDark from "./../../Images/Group.png";
 import AppoinmentDark from "./../../Images/Group (1).png";
 import Medical from "./../../Images/Icon_medical history.png";
-const Sidebar = ({ isDark, setDark }) => {
+const NewSideBar = ({ isDark }) => {
   return (
     <div
-      className={`w-[264px] h-full absolute pl-[37px]    ${
-        isDark ? "bg-[#2E1619]" : "bg-white"
-      }`}
+      className={`w-[96px] h-full     ${isDark ? "bg-[#2E1619]" : "bg-white"}`}
     >
       <div>
-        <div className="shadow-lg ">
+        <div className="shadow-lg">
           <img
-            className=" w-[45px]  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]"
+            className="w-[45px]  mx-auto absolute top-[31px] left-[28px] rounded h-[45px]"
             src={`${isDark ? menuDark : menu}`}
             alt=""
           />
         </div>
-        <div className="flex flex-col mt-[135px] gap-y-[45px]   ml-0 items-start">
-          <div className="flex  items-center ">
+        <div className="flex flex-col mt-[135px] gap-y-[45px] items-center">
+          <div>
             <img
-              className="w-[41px]  mx-auto  rounded h-[41px]"
+              className="w-[41px]  mx-auto  top-[180px] left-[32px] rounded h-[41px]"
               src={Home}
               alt=""
             />
-            <p className="ml-8 text-lg font-bold">Home</p>
+            <p>Home</p>
           </div>
-
-          <div className="flex items-center">
-            <img
-              className="w-[41px] mx-auto  top-[257px] left-[32px] rounded h-[41px]"
-              src={`${isDark ? PatientDark : Patient}`}
-              alt=""
-            />
-            <p className="ml-8 text-lg font-bold">Patient Profile</p>
-          </div>
-          <div className="flex items-center">
-            <img
-              className="w-[41px] mx-auto  top-[401px] left-[32px] rounded h-[41px]"
-              src={`${isDark ? AppoinmentDark : Appointment}`}
-              alt=""
-            />
-            <p className="ml-8 text-lg font-bold">Appointments</p>
-          </div>
-          <div className="flex items-center">
-            <img
-              className="w-[41px] mx-auto  top-[476px] left-[33px] rounded h-[41px]"
-              src={`${isDark ? MedicalDark : Medical}`}
-              alt=""
-            />
-            <p className="ml-8 text-lg font-bold">Medical History</p>
-          </div>
-          <div className="flex items-center">
+          <div>
             <img
               className="w-[41px] rounded-lg  mx-auto  top-[332px] left-[32px]  h-[41px]"
               src={`${isDark ? SettingsDark : Settings}`}
               alt=""
             />
-            <p className="ml-8 text-lg font-bold">Settings</p>
+            <p>Home</p>
           </div>
-          <div></div>
-          <div className="mt-[140px] flex ">
+          <div>
             <img
-              className="w-[53px] hidden block mr-4 h-[53px] mx-auto  rounded "
-              src={round}
+              className="w-[41px] mx-auto  top-[257px] left-[32px] rounded h-[41px]"
+              src={`${isDark ? PatientDark : Patient}`}
               alt=""
             />
-            <button className="bg-gradient-to-r from-[#FF7594] to-[#FF7C65] rounded-md text-white p-[16px]">
-              New Appointment
-            </button>
+            <p>Patient Profile</p>
           </div>
+          <div>
+            <img
+              className="w-[41px] mx-auto  top-[401px] left-[32px] rounded h-[41px]"
+              src={`${isDark ? AppoinmentDark : Appointment}`}
+              alt=""
+            />
+            <p>Appointments</p>
+          </div>
+          <div>
+            <img
+              className="w-[41px] mx-auto  top-[476px] left-[33px] rounded h-[41px]"
+              src={`${isDark ? MedicalDark : Medical}`}
+              alt=""
+            />
+            <p>Medical History</p>
+          </div>
+          <div></div>
+          <img
+            className="w-[53px] h-[53px] mx-auto absolute top-[861px] left-[20px] rounded "
+            src={round}
+            alt=""
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default NewSideBar;

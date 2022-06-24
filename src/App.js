@@ -12,7 +12,7 @@ import { useState } from "react";
 function App() {
   const [isDark, setDark] = useState(false);
   return (
-    <div className={`flex ${isDark ? "bg-black" : "bg-[#E5E5E5]"} `}>
+    <div className={`flex relative ${isDark ? "bg-black" : "bg-[#E5E5E5]"} `}>
       <div className="flex justify-between">
         <Sidebar isDark={isDark} setDark={setDark}></Sidebar>
       </div>
@@ -22,7 +22,7 @@ function App() {
         <ToDo isDark={isDark}></ToDo>
 
         <DetailAppointment></DetailAppointment>
-        <CoronaUpdate></CoronaUpdate>
+        <CoronaUpdate isDark={isDark}></CoronaUpdate>
       </div>
     </div>
   );

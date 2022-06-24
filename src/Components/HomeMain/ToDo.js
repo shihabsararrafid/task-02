@@ -93,7 +93,7 @@ const ToDo = ({ isDark }) => {
   //console.log(list);
   return (
     <div
-      className={` todo-list ml-[60px]   overflow-hidden rounded-lg ${
+      className={` todo-list ml-[120px]   overflow-hidden rounded-lg ${
         isDark ? "bg-[#2C2221]" : "bg-white"
       }  ${isDark ? "text-white" : "text-black"}  p-4`}
     >
