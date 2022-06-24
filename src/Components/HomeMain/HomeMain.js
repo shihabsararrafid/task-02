@@ -5,7 +5,7 @@ import ToDo from "./ToDo";
 
 const HomeMain = ({ isDark }) => {
   return (
-    <div className="  home-main   ml-[120px] ">
+    <div className="  home-main h-full   ml-[120px] ">
       <BannerPart></BannerPart>
       <HealthParam isDark={isDark}></HealthParam>
     </div>

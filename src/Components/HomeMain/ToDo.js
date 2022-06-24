@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import small from "./../../Images/small.png";
+import round from "./../../Images/round.png";
 import uncheck from "./../../Images/Icon_Vector_Uncheck.png";
 import check from "./../../Images/Icon_Vector_Check.png";
 import getDate from "../Hooks/GetDate";
@@ -93,7 +94,7 @@ const ToDo = ({ isDark }) => {
   //console.log(list);
   return (
     <div
-      className={` todo-list ml-[120px]   overflow-hidden rounded-lg ${
+      className={` todo-list ml-[120px] relative   overflow-hidden rounded-lg ${
         isDark ? "bg-[#2C2221]" : "bg-white"
       }  ${isDark ? "text-white" : "text-black"}  p-4`}
     >
@@ -105,17 +106,26 @@ const ToDo = ({ isDark }) => {
           cols="65"
           rows="4"
           onChange={(e) => setTodo(e.target.value)}
-          className={`  ${
+          className={`relative  ${
             isDark ? "bg-[#2C2221]" : "bg-white"
           }  border-[2px] focus:border-[#FF7978] outline-0 border-[#EDEBEB]`}
         ></textarea>
         {/* bg-gradient-to-r from-[#FF7594] to-[#FF7C65] */}
         <button
+          id="addwrite"
           onClick={addToList}
           className="flex h-[40px] ml-3  text-white items-center bg-gradient-to-r from-[#FF7594] to-[#FF7C65] py-1 px-3 rounded-md "
         >
           <img src={small} className="" alt="" />
+
           <span> Add</span>
+        </button>
+        <button
+          id="addIcon"
+          className="hidden absolute right-[10%] top-[80px] "
+          onClick={addToList}
+        >
+          <img src={round} className="" alt="" />
         </button>
       </div>
       <section className="select">
@@ -130,7 +140,7 @@ const ToDo = ({ isDark }) => {
             <span className="font-bold block ml-2">Select All</span>
           </div>
           <div>
-            <button className="flex h-[40px] ml-3  text-white items-center bg-gradient-to-r from-[#FF7594] to-[#FF7C65] py-1 px-3 rounded-md ">
+            <button className="flex w-[120px] h-[40px] ml-3  text-white items-center bg-gradient-to-r from-[#FF7594] to-[#FF7C65] py-1 px-3 rounded-md ">
               <img src={small} className="" alt="" />
               <span> Done</span>
             </button>
@@ -138,7 +148,7 @@ const ToDo = ({ isDark }) => {
         </div>
         <div className="my-1">
           {list.map((l) => (
-            <div className="flex  justify-between">
+            <div id="toDolistItem" className="flex  justify-between">
               {" "}
               <div className="flex my-1">
                 <img

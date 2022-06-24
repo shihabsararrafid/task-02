@@ -7,6 +7,7 @@
   grid-template-columns: repeat(12,1fr);
   grid-template-rows:30px 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 20px;
+  grid-column-gap: 20px;
   grid-template-areas: 
    "p p p p p p p p p p p p"
     "h h h h h h h . a a a a"
@@ -16,6 +17,25 @@
     "t t t t t t t . b b b b "
   ;
 
+}
+@media screen and (max-width:1000px) {
+  .main-part{
+    grid-template-rows:30px 400px 568px 350px;
+    grid-template-areas:
+    "p p p p p p p p p p p p"
+    "h h h h h h h h h h h h"
+    "t t t t t t a a a a a a"
+    "b b b b b b b b b b b b " ;
+  }
+  .home-main{
+    height: 600px;
+  }
+  .corona-update{
+    margin-left: 120px;
+  }
+  .corona-update .imgcorona,.infection{
+    height: 175px;
+  }
 }
 .profile{
   grid-area: p;

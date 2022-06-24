@@ -11,11 +11,11 @@ import vector from "./../../Images/Vector.png";
 import vectorDark from "./../../Images/Vector (4).png";
 const HealthParam = ({ isDark, setDark }) => {
   return (
-    <div className="grid grid-cols-4 mt-[28px] gap-x-[30px]">
+    <div className="grid grid-cols-4 w-full mt-[28px] gap-x-[30px]">
       <div
         className={`${isDark ? "bg-[#2C2221]" : "bg-white"} ${
           isDark ? "text-white" : "text-black"
-        } w-[157px] shadow-2xl rounded-md  p-3 `}
+        } w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
         <img className="" src={`${isDark ? pulseDark : pulse}`} alt="" />
         <h1 className="text-[12px] font-bold ">Pulse Count</h1>
@@ -38,7 +38,7 @@ const HealthParam = ({ isDark, setDark }) => {
       <div
         className={`${isDark ? "bg-[#2C2221]" : "bg-white"} ${
           isDark ? "text-white" : "text-black"
-        }  w-[157px] shadow-2xl rounded-md  p-3 `}
+        }  w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
         <img src={`${isDark ? pressureDark : pressure}`} alt="" />
         <h1 className="text-[12px] font-bold ">Blood Pressure</h1>
@@ -61,7 +61,7 @@ const HealthParam = ({ isDark, setDark }) => {
       <div
         className={`${isDark ? "bg-[#2C2221]" : "bg-white"} ${
           isDark ? "text-white" : "text-black"
-        } w-[157px] shadow-2xl rounded-md  p-3 `}
+        } w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
         <img src={`${isDark ? saturationDark : saturation}`} alt="" />
         <h1 className="text-[12px] font-bold ">Oxygen Saturation</h1>
@@ -85,7 +85,7 @@ const HealthParam = ({ isDark, setDark }) => {
       <div
         className={`${isDark ? "bg-[#2C2221]" : "bg-white"} ${
           isDark ? "text-white" : "text-black"
-        } w-[157px] shadow-2xl rounded-md  p-3 `}
+        } w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
         <img src={`${isDark ? sugarDark : sugar}`} alt="" />
         <h1 className="text-[12px] font-bold ">Glucose Count</h1>

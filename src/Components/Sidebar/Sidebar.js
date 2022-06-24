@@ -24,7 +24,9 @@ const Sidebar = ({ isDark, setDark }) => {
         isShrink ? "w-[96px]" : "w-[264px]"
       }  h-full absolute pl-[37px]  ${
         isShrink ? "overflow-hidden" : ""
-      } duration-300  ${isDark ? "bg-[#2E1619]" : "bg-white"}`}
+      } duration-300 ${isDark ? "text-white" : "text-black"}  ${
+        isDark ? "bg-[#2E1619]" : "bg-white"
+      }`}
     >
       <div>
         <div className="shadow-lg ">
@@ -42,7 +44,7 @@ const Sidebar = ({ isDark, setDark }) => {
             }  absolute top-[31px] left-[37px] items-center justify-start `}
           >
             <img className="w-[45px]" src={logo} alt="" />
-            <p className="text-2xl ml-6">
+            <p className="text-2xl font-bold ml-6">
               Medi<span className="text-[#FF7594] ">Doc</span>
             </p>
             <img
@@ -54,7 +56,7 @@ const Sidebar = ({ isDark, setDark }) => {
           </div>
         </div>
         <div className="flex flex-col mt-[135px] gap-y-[45px]   ml-0 items-start">
-          <div className="flex  items-center ">
+          <div className="flex cursor-pointer  items-center ">
             <img
               className="w-[41px]  mx-auto  rounded h-[41px]"
               src={Home}
@@ -63,7 +65,7 @@ const Sidebar = ({ isDark, setDark }) => {
             <p className="ml-8 text-lg font-bold">Home</p>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex cursor-pointer items-center">
             <img
               className="w-[41px] mx-auto  top-[257px] left-[32px] rounded h-[41px]"
               src={`${isDark ? PatientDark : Patient}`}
@@ -71,7 +73,7 @@ const Sidebar = ({ isDark, setDark }) => {
             />
             <p className="ml-8 text-lg font-bold">Patient Profile</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex cursor-pointer items-center">
             <img
               className="w-[41px] mx-auto  top-[401px] left-[32px] rounded h-[41px]"
               src={`${isDark ? AppoinmentDark : Appointment}`}
@@ -79,7 +81,7 @@ const Sidebar = ({ isDark, setDark }) => {
             />
             <p className="ml-8 text-lg font-bold">Appointments</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex cursor-pointer items-center">
             <img
               className="w-[41px] mx-auto  top-[476px] left-[33px] rounded h-[41px]"
               src={`${isDark ? MedicalDark : Medical}`}
@@ -87,7 +89,7 @@ const Sidebar = ({ isDark, setDark }) => {
             />
             <p className="ml-8 text-lg font-bold">Medical History</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex cursor-pointer items-center">
             <img
               className="w-[41px] rounded-lg  mx-auto  top-[332px] left-[32px]  h-[41px]"
               src={`${isDark ? SettingsDark : Settings}`}
