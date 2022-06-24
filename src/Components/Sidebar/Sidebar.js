@@ -15,23 +15,32 @@ import sideArrow from "./../../Images/Icon_SideArrow_round.png";
 import Medical from "./../../Images/Icon_medical history.png";
 const Sidebar = ({ isDark, setDark }) => {
   const [isShrink, setShrink] = useState(true);
-  //   const handleShrink = () => {
-  //     setShrink()
-  //   };
+  const handleShrink = () => {
+    setShrink(!isShrink);
+    console.log(isShrink);
+    const doc = document.getElementById("sidebar");
+    if (isShrink === true) {
+      doc.classList.remove("myactive");
+    } else if (isShrink === false) {
+      doc.classList.add("myactive");
+      console.log(" false");
+    }
+  };
   return (
     <div
-      className={`${
+      id="sidebar"
+      className={`shadow-2xl ${
         isShrink ? "w-[96px]" : "w-[264px]"
-      }  h-full absolute pl-[37px]  ${
+      }  h-full absolute z-10 pl-[37px]  ${
         isShrink ? "overflow-hidden" : ""
       } sidebar duration-300 ${isDark ? "text-white" : "text-black"}  ${
         isDark ? "bg-[#2E1619]" : "bg-white"
       }`}
     >
       <div>
-        <div className="shadow-lg ">
+        <div className="shadow-lg menu">
           <img
-            onClick={() => setShrink(!isShrink)}
+            onClick={handleShrink}
             className={`w-[45px] cursor-pointer  ${
               isShrink ? "" : "hidden"
             }  mx-auto absolute top-[31px] left-[37px] rounded h-[45px]`}
@@ -39,7 +48,7 @@ const Sidebar = ({ isDark, setDark }) => {
             alt=""
           />
           <div
-            className={`flex ${
+            className={`flex menuhidden ${
               isShrink ? "hidden" : ""
             }  absolute top-[31px] left-[37px] items-center justify-start `}
           >
@@ -48,7 +57,7 @@ const Sidebar = ({ isDark, setDark }) => {
               Medi<span className="text-[#FF7594] ">Doc</span>
             </p>
             <img
-              onClick={() => setShrink(!isShrink)}
+              onClick={handleShrink}
               className="ml-9 cursor-pointer"
               src={sideArrow}
               alt=""

@@ -18,6 +18,12 @@
   ;
 
 }
+.menufromanother{
+  display: none;
+}
+.profile{
+  justify-content: flex-end;
+}
 @media screen and (max-width:1000px) {
   .main-part{
     grid-template-rows:30px 400px 568px 350px;
@@ -27,6 +33,9 @@
     "t t t t t t a a a a a a"
     "b b b b b b b b b b b b " ;
   }
+  .profile{
+    justify-content:flex-end;
+  }
   
   .corona-update{
     margin-left: 120px;
@@ -35,9 +44,15 @@
     height: 175px;
     object-fit: cover;
   }
+  .menufromanother{
+    display: none;
+  }
+  
 }
 @media screen and (max-width:718px) {
- 
+ .myStyle {
+background-image: linear-gradient(yellow ,red);
+ }
   .main-part{
     grid-gap: 0;
     margin-top: 0;
@@ -68,7 +83,7 @@
     flex-direction: column;
     margin-right: 0px;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .detail-appointments{
    margin-right: 0px;
@@ -76,6 +91,7 @@
     margin-left:0px;
     margin-bottom: 10px;
   }
+
   .todo-list{
     margin-left: 0;
   }
@@ -83,21 +99,39 @@
     flex-direction: column;
   }
   .corona-update .insideCorona>img{
-    width: 100%;
+    width: 80%;
+    object-fit: cover;
   }
   .corona-update .insideCorona>div{
     width: 100%;
     height: 350px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .corona-update .extraInfo{
     display: block;
   }
   .sidebar{
-    height:850px ;
+    width:264px ;
+    overflow: visible;
+    height:820px ;
+    display: none;
+
+  }
+  .sidebar .menu{
+    display: hidden;
+    
+  }
+  .menufromanother{
+    display: block;
+  }
+  .myactive{
+    background-color: black;
+  }
+  .sidebar .menuhidden{
+    display: flex;
   }
   .profile{
-
+justify-content: space-between;
     background-image: linear-gradient( 91.57deg, #FF7594 19.86%, #FF797B 84.16%, #FF7C65 139.72%);
     padding-bottom:10px ;
   }

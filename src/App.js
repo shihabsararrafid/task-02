@@ -17,7 +17,7 @@ function App() {
         isDark ? "bg-black" : "bg-[#E5E5E5]"
       } `}
     >
-      <div className="flex justify-between">
+      <div className="flex relative justify-between">
         <Sidebar isDark={isDark} setDark={setDark}></Sidebar>
       </div>
       <div className="flex mt-10 mb-12 main-part flex-row justify-between flex-wrap">
