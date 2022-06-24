@@ -12,7 +12,11 @@ import { useState } from "react";
 function App() {
   const [isDark, setDark] = useState(false);
   return (
-    <div className={`flex relative ${isDark ? "bg-black" : "bg-[#E5E5E5]"} `}>
+    <div
+      className={`flex relative h-auto ${
+        isDark ? "bg-black" : "bg-[#E5E5E5]"
+      } `}
+    >
       <div className="flex justify-between">
         <Sidebar isDark={isDark} setDark={setDark}></Sidebar>
       </div>

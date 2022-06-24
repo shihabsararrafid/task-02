@@ -23,7 +23,7 @@ const CoronaUpdate = ({ isDark }) => {
       }
     rounded-lg `}
     >
-      <div className="flex items-center font-semibold justify-between">
+      <div className="flex  items-center font-semibold justify-between">
         <h1>Covid 19 Updates</h1>
         <div>
           <p>{finalDate}</p>
@@ -33,7 +33,7 @@ const CoronaUpdate = ({ isDark }) => {
           </div>
         </div>
       </div>
-      <div className="mt-10 flex">
+      <div className="mt-10 insideCorona flex">
         <img
           className="w-[50%] imgcorona h-[70%] object-cover"
           src={corona}
@@ -44,6 +44,12 @@ const CoronaUpdate = ({ isDark }) => {
           <p className="text-4xl  text-white ">2000</p>
           <p>Infection Rate </p>
           <p className="text-4xl text-white">11%</p>
+          <div className="hidden extraInfo">
+            <p>Total Infection</p>
+            <p className="text-4xl  text-white ">1.96M</p>
+            <p>Total Number Of Deaths</p>
+            <p className="text-4xl  text-white ">29,134</p>
+          </div>
         </div>
       </div>
     </div>

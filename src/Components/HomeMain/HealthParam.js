@@ -11,28 +11,30 @@ import vector from "./../../Images/Vector.png";
 import vectorDark from "./../../Images/Vector (4).png";
 const HealthParam = ({ isDark, setDark }) => {
   return (
-    <div className="grid grid-cols-4 w-full mt-[28px] gap-x-[30px]">
+    <div className="grid health-param-container grid-cols-4 w-full mt-[28px] gap-x-[30px]">
       <div
         className={`${isDark ? "bg-[#2C2221]" : "bg-white"} ${
           isDark ? "text-white" : "text-black"
         } w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
-        <img className="" src={`${isDark ? pulseDark : pulse}`} alt="" />
-        <h1 className="text-[12px] font-bold ">Pulse Count</h1>
-        <p className="font-semibold">60 bpm</p>
-        <div className="flex items-center">
-          <img
-            className="w-[9px] h-[6px]"
-            src={`${isDark ? vectorDark : vector}`}
-            alt=""
-          />
-          <p
-            className={`text-[12px] ml-2 ${
-              isDark ? "text-white" : "text-[#03922B]"
-            }  font-semibold`}
-          >
-            Normal
-          </p>
+        <div className="">
+          <img className="" src={`${isDark ? pulseDark : pulse}`} alt="" />
+          <h1 className="text-[12px] font-bold ">Pulse Count</h1>
+          <p className="font-semibold">60 bpm</p>
+          <div className="flex items-center">
+            <img
+              className="w-[9px] h-[6px]"
+              src={`${isDark ? vectorDark : vector}`}
+              alt=""
+            />
+            <p
+              className={`text-[12px] ml-2 ${
+                isDark ? "text-white" : "text-[#03922B]"
+              }  font-semibold`}
+            >
+              Normal
+            </p>
+          </div>
         </div>
       </div>
       <div
@@ -40,22 +42,24 @@ const HealthParam = ({ isDark, setDark }) => {
           isDark ? "text-white" : "text-black"
         }  w-[157px] singleParams shadow-2xl rounded-md  p-3 `}
       >
-        <img src={`${isDark ? pressureDark : pressure}`} alt="" />
-        <h1 className="text-[12px] font-bold ">Blood Pressure</h1>
-        <p className="font-semibold">110/70 mmHg</p>
-        <div className="flex items-center">
-          <img
-            className="w-[9px] h-[6px]"
-            src={`${isDark ? vectorDark : vector}`}
-            alt=""
-          />
-          <p
-            className={`text-[12px] ml-2 ${
-              isDark ? "text-white" : "text-[#82AB0D]"
-            }  font-semibold`}
-          >
-            Slightly higher
-          </p>
+        <div>
+          <img src={`${isDark ? pressureDark : pressure}`} alt="" />
+          <h1 className="text-[12px] font-bold ">Blood Pressure</h1>
+          <p className="font-semibold">110/70 mmHg</p>
+          <div className="flex items-center">
+            <img
+              className="w-[9px] h-[6px]"
+              src={`${isDark ? vectorDark : vector}`}
+              alt=""
+            />
+            <p
+              className={`text-[12px] ml-2 ${
+                isDark ? "text-white" : "text-[#82AB0D]"
+              }  font-semibold`}
+            >
+              Slightly higher
+            </p>
+          </div>
         </div>
       </div>
       <div

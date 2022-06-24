@@ -24,7 +24,7 @@ const Sidebar = ({ isDark, setDark }) => {
         isShrink ? "w-[96px]" : "w-[264px]"
       }  h-full absolute pl-[37px]  ${
         isShrink ? "overflow-hidden" : ""
-      } duration-300 ${isDark ? "text-white" : "text-black"}  ${
+      } sidebar duration-300 ${isDark ? "text-white" : "text-black"}  ${
         isDark ? "bg-[#2E1619]" : "bg-white"
       }`}
     >
