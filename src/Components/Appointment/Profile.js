@@ -8,7 +8,7 @@ import downArrow from "./../../Images/Icon_downArrow.png";
 import Sidebar from "../Sidebar/Sidebar";
 import NewSideBar from "../Sidebar/NewSideBar";
 const Profile = ({ isDark, setDark, isShrink }) => {
-  const [anotherShrink, setAnotherShrink] = useState(false);
+  const [anotherShrink, setAnotherShrink] = useState(true);
   const handleShrink = () => {
     console.log(" clicked");
     setAnotherShrink(!anotherShrink);

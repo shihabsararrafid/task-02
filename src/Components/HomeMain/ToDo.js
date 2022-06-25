@@ -104,6 +104,7 @@ const ToDo = ({ isDark }) => {
       return !deletedList.includes(l);
     });
     setList(newList);
+    setSelectSingle([]);
   };
   //console.log(list);
   return (
