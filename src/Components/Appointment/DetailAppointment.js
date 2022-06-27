@@ -19,13 +19,27 @@ const DetailAppointment = ({ isDark }) => {
           <div
             className={` ${
               isDark ? "bg-[#413837]" : "bg-[#FFF5F5]"
-            }  singleAppointments  w-[380px] rounded-lg h-[101px]`}
+            }  singleAppointments flex  w-[380px] rounded-lg h-[101px]`}
           >
             <div className="w-[70px] text-[#D2D5D6] font-semibold p-[8px] h-full bg-[#FFFFFF] border-[1px] text-[20px] !border-[#EDEBEB]  rounded-xl">
               <span className="text-[13px]"> 2022</span> <br />{" "}
-              <span className="text-black">24 </span>
+              <span className="text-black">30 </span>
               <br />
               <span> June</span>
+            </div>
+            <div className="p-3">
+              <h1 className="font-medium">Dr. Muhammad Abdul Hussein</h1>
+              <p className="font-normal">Cardiologist</p>
+              <div className="flex gap-2">
+                <p className="bg-white p-2  rounded-lg">
+                  <span className="text-[#8A8686]"> Slot</span>{" "}
+                  <span>Morning</span>
+                </p>
+                <p className="bg-white p-2 rounded-lg ">
+                  <span className="text-[#8A8686]">Time</span>{" "}
+                  <span>10.00 AM</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -38,13 +52,27 @@ const DetailAppointment = ({ isDark }) => {
           <div
             className={` ${
               isDark ? "bg-[#413837]" : "bg-[#FFF5F5]"
-            }  singleAppointments  w-[380px] rounded-lg h-[101px]`}
+            }  singleAppointments flex  w-[380px] rounded-lg h-[101px]`}
           >
             <div className="w-[70px] text-[#D2D5D6] font-semibold p-[8px] h-full bg-[#FFFFFF] border-[1px] text-[20px] !border-[#EDEBEB]  rounded-xl">
               <span className="text-[13px]"> 2022</span> <br />{" "}
-              <span className="text-black">24 </span>
+              <span className="text-black">30 </span>
               <br />
               <span> June</span>
+            </div>
+            <div className="p-3">
+              <h1 className="font-medium">Dr. Muhammad Abdul Hussein</h1>
+              <p className="font-normal">Cardiologist</p>
+              <div className="flex gap-2">
+                <p className="bg-white p-2  rounded-lg">
+                  <span className="text-[#8A8686]"> Slot</span>{" "}
+                  <span>Morning</span>
+                </p>
+                <p className="bg-white p-2 rounded-lg ">
+                  <span className="text-[#8A8686]">Time</span>{" "}
+                  <span>10.00 AM</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -57,13 +85,27 @@ const DetailAppointment = ({ isDark }) => {
           <div
             className={` ${
               isDark ? "bg-[#413837]" : "bg-[#FFF5F5]"
-            }  singleAppointments  w-[380px] rounded-lg h-[101px]`}
+            }  singleAppointments flex  w-[380px] rounded-lg h-[101px]`}
           >
             <div className="w-[70px] text-[#D2D5D6] font-semibold p-[8px] h-full bg-[#FFFFFF] border-[1px] text-[20px] !border-[#EDEBEB]  rounded-xl">
               <span className="text-[13px]"> 2022</span> <br />{" "}
-              <span className="text-black">24 </span>
+              <span className="text-black">30 </span>
               <br />
               <span> June</span>
+            </div>
+            <div className="p-3">
+              <h1 className="font-medium">Dr. Muhammad Abdul Hussein</h1>
+              <p className="font-normal">Cardiologist</p>
+              <div className="flex gap-2">
+                <p className="bg-white p-2  rounded-lg">
+                  <span className="text-[#8A8686]"> Slot</span>{" "}
+                  <span>Morning</span>
+                </p>
+                <p className="bg-white p-2 rounded-lg ">
+                  <span className="text-[#8A8686]">Time</span>{" "}
+                  <span>10.00 AM</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -74,13 +116,27 @@ const DetailAppointment = ({ isDark }) => {
           <div
             className={` ${
               isDark ? "bg-[#413837]" : "bg-[#FFF5F5]"
-            }  singleAppointments  w-[380px] rounded-lg h-[101px]`}
+            }  singleAppointments flex  w-[380px] rounded-lg h-[101px]`}
           >
             <div className="w-[70px] text-[#D2D5D6] font-semibold p-[8px] h-full bg-[#FFFFFF] border-[1px] text-[20px] !border-[#EDEBEB]  rounded-xl">
               <span className="text-[13px]"> 2022</span> <br />{" "}
-              <span className="text-black">24 </span>
+              <span className="text-black">30 </span>
               <br />
               <span> June</span>
+            </div>
+            <div className="p-3">
+              <h1 className="font-medium">Dr. Muhammad Abdul Hussein</h1>
+              <p className="font-normal">Cardiologist</p>
+              <div className="flex gap-2">
+                <p className="bg-white p-2  rounded-lg">
+                  <span className="text-[#8A8686]"> Slot</span>{" "}
+                  <span>Morning</span>
+                </p>
+                <p className="bg-white p-2 rounded-lg ">
+                  <span className="text-[#8A8686]">Time</span>{" "}
+                  <span>10.00 AM</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
